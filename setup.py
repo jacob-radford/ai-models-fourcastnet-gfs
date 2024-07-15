@@ -20,29 +20,24 @@ def read(fname):
     return io.open(file_path, encoding="utf-8").read()
 
 
-version = None
-for line in read("ai_models_fourcastnet/__init__.py").split("\n"):
-    if line.startswith("__version__"):
-        version = line.split("=")[-1].strip()[1:-1]
-
+version = "0.0.1"
 
 assert version
 
 
 setuptools.setup(
-    name="ai-models-fourcastnet",
+    name="ai-models-fourcastnet-gfs",
     version=version,
     description="An ai-models plugin to run FourCastNet",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
-    author="European Centre for Medium-Range Weather Forecasts (ECMWF)",
-    author_email="software.support@ecmwf.int",
+    author="Jacob Radford",
+    author_email="jacob.t.radford@gmail.com",
     license="Apache License Version 2.0",
-    url="https://github.com/ecmwf-lab/ai-models-fourcastnet",
+    url="https://github.com/jacob-radford/ai-models-fourcastnet-gfs",
     packages=setuptools.find_packages(),
     include_package_data=True,
     install_requires=[
-        "ai-models>=0.4.0",
         "torch>=2.0.0",
         "timm>=0.6.13",
         "einops>=0.6.0",
@@ -51,8 +46,8 @@ setuptools.setup(
     zip_safe=True,
     keywords="tool",
     entry_points={
-        "ai_models.model": [
-            "fourcastnet = ai_models_fourcastnet.model:model",
+        "ai_models_gfs.model": [
+            "fourcastnet = ai_models_fourcastnet_gfs.model:model",
         ]
     },
     classifiers=[

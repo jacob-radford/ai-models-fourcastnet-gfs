@@ -1,11 +1,10 @@
-# ai-models-fourcastnet
+# ai-models-fourcastnet-gfs
 
 >
-> :warning: This plugin is now deprecated. Please use the newer version that can be found at https://github.com/ecmwf-lab/ai-models-fourcastnetv2
+> :warning: This plugin is now deprecated. Please use the newer version that can be found at https://github.com/jacob-radford/ai-models-gfs-fourcastnetv2
 > 
 
-
-`ai-models-fourcastnet` is an [ai-models](https://github.com/ecmwf-lab/ai-models) plugin to run [NVIDIA's FourCastNet](https://github.com/NVlabs/FourCastNet).
+`ai-models-fourcastnet-gfs` is an extension of the [ai-models-fourcastnet](https://github.com/ecmwf-lab/ai-models-fourcastnet) package, which itself is a plugin to run Nvidia's spherical harmonics tranformer with [ai-models](https://github.com/ecmwf-lab/ai-models).
 
 FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators
 https://arxiv.org/abs/2202.11214
